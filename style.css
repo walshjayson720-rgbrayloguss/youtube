@@ -1,0 +1,78 @@
+:root {
+  --bg: #0f0f0f;
+  --text: #fff;
+  --card: #181818;
+}
+
+body.light {
+  --bg: #fff;
+  --text: #000;
+  --card: #f1f1f1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: var(--card);
+  gap: 10px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.search-box button,
+.toggle {
+  padding: 8px;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.video {
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video iframe {
+  width: 100%;
+  height: 170px;
+}
+
+.video h3 {
+  font-size: 14px;
+  padding: 8px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
